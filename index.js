@@ -34,7 +34,7 @@ app.post('/webhook', (req, res) => {
 */
 
 function sendText (sender, text) {
-  let data = {
+  var data = {
     to: sender,
     messages: [
       {
