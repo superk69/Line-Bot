@@ -1,8 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
-
-var weather = require("Openweather-Node")
+var weather = require('weather-js');
 
 var app = express();
 
@@ -61,6 +60,8 @@ function sendText (sender, text) {
     if (body) console.log(body);
   });
 }
+
+
 
 
 app.listen(app.get('port'), function() {
