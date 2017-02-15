@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/weather-EiEi', function(request, response){
+app.get('/weather', function(request, response){
   request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
     if (err) {
       throw err;
