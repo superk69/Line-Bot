@@ -23,6 +23,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/weather-EiEi', function(request, response){
+  response.send('<h1>Fuck!!</h1>');
+});
+
 
 app.post('/webhook', (req, res) => {
   var text = req.body.events[0].message.text
