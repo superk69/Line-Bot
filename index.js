@@ -42,7 +42,7 @@ function getWeather(){
 //    var obj = json['current_observation'];
 //    var obj1 = obj["display_location"];
 //    return obj1["state_name"];
-      return new json;
+      return json;
   });
 }
 
