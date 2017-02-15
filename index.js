@@ -39,7 +39,7 @@ function getWeather(){
     if (err) {
       throw err;
     }
-    var obj = json['current_observation'];
+    let obj = json['current_observation'];
     console.log(obj["display_location"]);
     return JSON.stringify(obj["display_location"]);
   })
@@ -64,14 +64,15 @@ app.post('/webhook', (req, res) => {
 
 function sendText (sender, text) {
   //weather
-//  var obj = getWeather();
+  let obj = getWeather();
+  console.log(obj);
   //var str = JSON.stringify(obj);
   var data = {
     to: sender,
     messages: [
       {
-        type: 'json',
-        text: String(getWeather())
+        type: 'text',
+        text: obj
       }
     ]
   };
