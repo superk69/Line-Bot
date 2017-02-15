@@ -24,7 +24,9 @@ app.get('/', function(request, response) {
 });
 
 app.get('/weather-EiEi', function(request, response){
-  response.send('<h1>Fuck!!</h1>');
+//  var text= wunderground.[resource calls(s)].request(myQuery, callback);
+  var t = wunderground.body.events[0].message.text
+  response.send('<h1> t </h1>');
 });
 
 
@@ -69,16 +71,10 @@ function sendText (sender, text) {
     if (body) console.log(body);
   });
 }
-/*
-wunderground.planner('01/13', '01/15').request('84111', function(err, response){
-  console.log(response);
-});
-*/
-/*
-weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result) {
-  if(err) console.log(err);
 
-  console.log(JSON.stringify(result, null, 2));
+/*
+wunderground.conditions().request('84111', function(err, response){
+    console.log(response);
 });
 */
 
