@@ -42,7 +42,7 @@ function getWeather(){
 //    var obj = json['current_observation'];
 //    var obj1 = obj["display_location"];
 //    return obj1["state_name"];
-      return json;
+      return new json;
   });
 }
 
@@ -64,7 +64,7 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  var tmp = new getWeather();
+  var tmp = getWeather();
   console.log(tmp);
   var data = {
     to: sender,
