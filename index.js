@@ -30,7 +30,8 @@ app.get('/weather', function(req, response){
 //    obj = JSON.parse(json);
     var obj = json['current_observation'];
 
-    response.send(obj["display_location"].["state_name"]);
+
+    response.send(obj["display_location"]["state_name"]);
   })
 });
 
