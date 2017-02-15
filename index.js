@@ -41,7 +41,7 @@ function getWeather(){
     }
     obj = json['current_observation'];
 //    console.log(obj["display_location"]);
-    return JSON.stringify(obj["display_location"]);
+    return obj["display_location"];
   })
 }
 
