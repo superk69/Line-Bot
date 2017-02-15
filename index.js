@@ -1,10 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
-//var weather = require('weather-js');
-var Wunderground = require('wundergroundnode');
-var myKey = '12312314';
-var wunderground = new Wunderground(myKey);
 
 var app = express();
 
@@ -24,9 +20,15 @@ app.get('/', function(request, response) {
 });
 
 app.get('/weather-EiEi', function(request, response){
-  var text = http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/CA/San_Francisco.json
-  response.send('<h1> text </h1>');
+  request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/CA/San_Francisco.json', json:true}, function(err, res, json){
+    if (err) {
+      throw err;
+    }
+    response.send(json);
+  })
 });
+
+
 
 
 app.post('/webhook', (req, res) => {
