@@ -39,9 +39,10 @@ function getWeather(){
     if (err) {
       throw err;
     }
-    var obj = json['current_observation'];
-    var obj1 = obj["display_location"];
-    return obj1["state_name"];
+//    var obj = json['current_observation'];
+//    var obj1 = obj["display_location"];
+//    return obj1["state_name"];
+      return json;
   });
 }
 
