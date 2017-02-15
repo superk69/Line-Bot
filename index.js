@@ -70,7 +70,7 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-        text: str
+        text: str +''
       }
     ]
   };
