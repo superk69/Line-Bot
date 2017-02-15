@@ -24,7 +24,8 @@ app.get('/', function(request, response) {
 });
 
 app.get('/weather-EiEi', function(request, response){
-  response.send('<h1> http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/CA/San_Francisco.json </h1>');
+  var text = http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/CA/San_Francisco.json
+  response.send('<h1> text </h1>');
 });
 
 
