@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/weather-EiEi', function(request, response){
-  request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/CA/San_Francisco.json', json:true}, function(err, res, json){
+  request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
     if (err) {
       throw err;
     }
