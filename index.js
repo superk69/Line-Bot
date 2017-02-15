@@ -1,7 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
-var weather = require('weather-js');
+//var weather = require('weather-js');
+var Wunderground = require('wundergroundnode');
+var myKey = '12312314';
+var wunderground = new Wunderground(myKey);
 
 var app = express();
 
@@ -61,12 +64,18 @@ function sendText (sender, text) {
   });
 }
 
+wunderground.planner('01/13', '01/15').request('84111', function(err, response){
+  if(err) console.log(err);
+  console.log(response);
+}
+
+/*
 weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result) {
   if(err) console.log(err);
 
   console.log(JSON.stringify(result, null, 2));
 });
-
+*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
