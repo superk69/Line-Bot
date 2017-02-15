@@ -46,7 +46,7 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-        text: text + 'ถถถถ+'
+        text: text + ' ถถถถ+'
       }
     ]
   };
