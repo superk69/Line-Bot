@@ -63,7 +63,7 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  var str = Stringify(new getWeather());
+  var str = JSON.stringify(new getWeather());
   var data = {
     to: sender,
     messages: [
