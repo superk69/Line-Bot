@@ -40,7 +40,7 @@ function getWeather(){
       throw err;
     }
     obj = json['current_observation'];
-    console.log(obj["display_location"]);
+//    console.log(obj["display_location"]);
     return JSON.stringify(obj["display_location"]);
   })
 }
@@ -50,8 +50,8 @@ app.post('/webhook', (req, res) => {
   var text = req.body.events[0].message.text
   var sender = req.body.events[0].source.userId
   var replyToken = req.body.events[0].replyToken
-  console.log(text, sender, replyToken);
-  console.log(typeof sender, typeof text);
+//  console.log(text, sender, replyToken);
+//  console.log(typeof sender, typeof text);
   // console.log(req.body.events[0])
   /*
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
@@ -86,9 +86,9 @@ function sendText (sender, text) {
     body: data,
     json: true
   }, function (err, res, body) {
-    if (err) console.log('error');
-    if (res) console.log('success');
-    if (body) console.log(body);
+  ///  if (err) console.log('error');
+  //  if (res) console.log('success');
+  //  if (body) console.log(body);
   });
 }
 
