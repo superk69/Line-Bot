@@ -40,6 +40,7 @@ function getWeather(){
       throw err;
     }
     var obj = json['current_observation'];
+    console.log(obj["display_location"]);
     return obj["display_location"];
   })
 }
