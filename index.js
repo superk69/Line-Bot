@@ -39,9 +39,9 @@ function getWeather(){
     if (err) {
       throw err;
     }
-    obj = json['current_observation'];
-//    console.log(obj["display_location"]);
-    return obj["display_location"];
+    var obj = json['current_observation'];
+    var obj1 = obj["display_location"];
+    return obj1["state_name"];
   })
 }
 
@@ -64,8 +64,8 @@ app.post('/webhook', (req, res) => {
 
 function sendText (sender, text) {
   //weather
-  var obj = JSON.stringify(getWeather());
-  console.log(Object.prototype.toString.call(String(obj)));
+  var obj = getWeather();
+  console.log(Object.prototype.toString.call(obj));
   //var str = JSON.stringify(obj);
   var data = {
     to: sender,
