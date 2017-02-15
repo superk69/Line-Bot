@@ -67,6 +67,7 @@ function sendText (sender, text) {
     if (err) {
       throw err;
     }
+  });
     var obj = json['current_observation'];
     var obj1 = obj["display_location"];
   var str = JSON.stringify(obj1);
