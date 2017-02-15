@@ -65,6 +65,7 @@ function sendText (sender, text) {
 }
 
 wunderground.planner('01/13', '01/15').request('84111', function(err, response){
+  console.log("Hey Hitler!!!");
   if(err) console.log(err);
   console.log(response);
 }
