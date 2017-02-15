@@ -33,7 +33,7 @@ app.get('/weather', function(req, response){
   })
 });
 */
-/*
+
 function getWeather(){
   request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
     if (err) {
@@ -44,7 +44,7 @@ function getWeather(){
     return obj1["state_name"];
   })
 }
-*/
+
 
 app.post('/webhook', (req, res) => {
   var text = req.body.events[0].message.text
@@ -63,14 +63,7 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
-    if (err) {
-      throw err;
-    }
-    var obj = json['current_observation'];
-  });
-    var obj1 = obj["display_location"];
-  var str = JSON.stringify(obj1);
+  var str = JSON.Stringify(new getWeather());
   var data = {
     to: sender,
     messages: [
