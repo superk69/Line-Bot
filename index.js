@@ -63,7 +63,13 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  var str = JSON.stringify(getWeather());
+  request({url: 'http://api.wunderground.com/api/ff6d8d1f8d1c171e/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
+    if (err) {
+      throw err;
+    }
+    var obj = json['current_observation'];
+    var obj1 = obj["display_location"];
+  var str = JSON.stringify(obj1);
   var data = {
     to: sender,
     messages: [
