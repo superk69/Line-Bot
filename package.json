@@ -12,8 +12,8 @@
   "dependencies": {
     "body-parser": "^1.16.1",
     "cors": "^2.8.1",
-    "ejs": "2.4.1",
-    "express": "4.13.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.3",
     "forecast": "^0.3.2",
     "jade": "^1.11.0",
     "pug": "^2.0.0-beta11",
