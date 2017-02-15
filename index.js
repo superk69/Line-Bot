@@ -63,13 +63,11 @@ function sendText (sender, text) {
     if (body) console.log(body);
   });
 }
-
+/*
 wunderground.planner('01/13', '01/15').request('84111', function(err, response){
-  console.log("Hey Hitler!!!");
-  if(err) console.log(err);
   console.log(response);
 });
-
+*/
 /*
 weather.find({search: 'San Francisco, CA', degreeType: 'F'}, function(err, result) {
   if(err) console.log(err);
