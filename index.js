@@ -71,7 +71,7 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-        text: getWeather();
+        text: getWeather().toString()
       }
     ]
   };
