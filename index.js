@@ -26,7 +26,8 @@ app.get('/weather', function(req, response){
     if (err) {
       throw err;
     }
-    response.send(json);
+    obj = JSON.parse(json);
+    response.send(JSON.stringify(obj["response"]));
   })
 });
 
