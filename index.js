@@ -41,7 +41,7 @@ function getWeather(){
     }
     var obj = json['current_observation'];
     console.log(obj["display_location"]);
-    return obj["display_location"];
+    return JSON.stringify(obj["display_location"]);
   })
 }
 
@@ -70,7 +70,7 @@ function sendText (sender, text) {
     to: sender,
     messages: [
       {
-        type: 'text',
+        type: 'json',
         text: String(getWeather())
       }
     ]
