@@ -69,7 +69,7 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-        text: 'kuay'
+        text: str + 'kuay'
       }
     ]
   };
