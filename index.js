@@ -63,13 +63,13 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  //var str = JSON.stringify(obj);
+  var str = String(getWeather());
   var data = {
     to: sender,
     messages: [
       {
         type: 'text',
-        text: String(getWeather())
+        text: 'kuay'
       }
     ]
   };
@@ -83,9 +83,9 @@ function sendText (sender, text) {
     body: data,
     json: true
   }, function (err, res, body) {
-  ///  if (err) console.log('error');
-  //  if (res) console.log('success');
-  //  if (body) console.log(body);
+    if (err) console.log('error');
+    if (res) console.log('success');
+    if (body) console.log(body);
   });
 }
 
