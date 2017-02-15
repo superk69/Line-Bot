@@ -51,8 +51,8 @@ app.post('/webhook', (req, res) => {
   var text = req.body.events[0].message.text
   var sender = req.body.events[0].source.userId
   var replyToken = req.body.events[0].replyToken
-//  console.log(text, sender, replyToken);
-//  console.log(typeof sender, typeof text);
+  //console.log(text, sender, replyToken);
+  //console.log(typeof sender, typeof text);
   // console.log(req.body.events[0])
   /*
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
@@ -64,7 +64,7 @@ app.post('/webhook', (req, res) => {
 
 
 function sendText (sender, text) {
-  var tmp = getWeather();
+  var tmp = yield getWeather();
   console.log(tmp);
   var data = {
     to: sender,
